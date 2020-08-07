@@ -1,0 +1,43 @@
+html,body{
+  background: #ccc;
+}
+.container{
+  width: 1000px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;   
+  /* algin-items 一定要加 要不然columns高度撑满 */
+}
+.container .column{
+  width: 240px;
+}
+.container .column .itemBox{
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px 0 #222;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.container .column .itemBox:hover{
+  transform: scale(1.05) translateY(-5px);
+}
+.container .column .itemBox .imgBox{
+  width: 100%;
+  background: url(../images/default.gif) no-repeat center center #F4F4F4;
+}
+.container .column .itemBox img{
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.container .column .itemBox p{
+  margin-top: 5px;
+	color: #000;
+	font-size: 12px;
+	line-height: 20px;
+}
